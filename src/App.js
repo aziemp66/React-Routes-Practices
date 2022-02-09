@@ -1,25 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import AllMeetupsPage from "./pages/AllMeetups";
+import NewMeetupPage from "./pages/NewMeetup";
+import FavoritesPage from "./pages/Favorites";
 
 function App() {
     return (
         <Routes>
-            <Route path="/home" element={<AllMeetupsPage />} />
+            <Route path="/" element={<AllMeetupsPage />} />
+            <Route path="/new-meetup" element={<NewMeetupPage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
         </Routes>
     );
-}
-
-function Home() {
-    return <h2>Home</h2>;
-}
-
-function About() {
-    return <h2>About</h2>;
-}
-
-function Users() {
-    return <h2>Users</h2>;
 }
 
 export default App;
